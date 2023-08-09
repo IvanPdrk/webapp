@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Item</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Confirm Deletion</h1>
+        <p>Are you sure you want to delete the item with ID {{ item.id }}?</p>
+        <form method="post" action="{{ url_for('delete', id=item.id) }}">
+            <button type="submit" class="btn btn-danger">Delete Item</button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>
+
